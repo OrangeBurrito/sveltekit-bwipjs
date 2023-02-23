@@ -3,10 +3,11 @@
 
 </script>
 
-<p>Barcode!</p>
-<h1>some things</h1>
-<h2>some other things</h2>
-<h2>even more things</h2>
+<h1>Barcode!</h1>
+<h2>some things</h2>
+<h3>some other things</h3>
+<h4>even more things</h4>
+<p>Enable "Fit to Page Width" in the browser Print Dialog</p>
 
 <BarcodeLabel text="ohmygosh"/>
 <BarcodeLabel text="whatisthis" labels={['four', 'five', 'six']}/>

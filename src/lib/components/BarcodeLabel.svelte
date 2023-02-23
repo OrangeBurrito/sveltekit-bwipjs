@@ -2,7 +2,10 @@
 	import Barcode from "$lib/components/Barcode.svelte";
 
 	export let text: string = ''
-	export let labels: string[] = ['One', 'Two', 'Three']
+	/**
+	 * Label to display above the barcode. Takes in an array of strings.
+	 */
+	export let labels: string[] = ['one', 'two', 'three']
 </script>
 
 <barcode-label>

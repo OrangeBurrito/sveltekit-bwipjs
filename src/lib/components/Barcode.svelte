@@ -5,8 +5,13 @@
 	let canvas: HTMLCanvasElement
 
 	export let text: string = ""
-	// width and height are percentages
+	/**
+	 * Width of the barcode as a percentage of its parent element.
+	 */
 	export let width: number = 80
+	/**
+	 * Height of the barcode as a percentage of its parent element.
+	 */
 	export let height: number = 40
 
 	onMount(() => {
