@@ -9,5 +9,5 @@
 <h2>even more things</h2>
 
 <BarcodeLabel text="ohmygosh"/>
-<BarcodeLabel text="whatisthis"/>
-<BarcodeLabel text="printacode"/>
+<BarcodeLabel text="whatisthis" labels={['four', 'five', 'six']}/>
+<BarcodeLabel text="printacode" labels={['seven', 'eight', 'nine', 'ten']}/>

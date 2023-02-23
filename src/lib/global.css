@@ -5,7 +5,7 @@
 }
 
 @media print {
-	body :not(barcode-label) {
+	body :not(barcode-label *) {
 		display: none;
 	}
 }

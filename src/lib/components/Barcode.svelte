@@ -3,7 +3,9 @@
 	import { onMount } from "svelte";
 
 	let canvas: HTMLCanvasElement
+
 	export let text: string = ""
+	// width and height are percentages
 	export let width: number = 80
 	export let height: number = 40
 
