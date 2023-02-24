@@ -4,29 +4,24 @@
 
 	let canvas: HTMLCanvasElement
 
-	export let text: string = ""
-	/**
-	 * Width of the barcode as a percentage of its parent element.
-	 */
-	export let width: number = 80
-	/**
-	 * Height of the barcode as a percentage of its parent element.
-	 */
-	export let height: number = 40
+	export let value: string = 'oooooo'
 
 	onMount(() => {
 		BwipJs.toCanvas(canvas, {
 			bcid: "code128",
-			text: text,
+			text: value,
 			scale: 1
 		})
 	})
 </script>
 
-<canvas bind:this={canvas} style={`width: ${width}%; height: ${height}%`}></canvas>
+<canvas bind:this={canvas}></canvas>
 
 <style>
 	canvas {
+		/* Width and height of the barcode as CSS variables, used as component props */
+		width: var(--width);
+		height: var(--height);
 		display: block;
 		image-rendering: crisp-edges;
 	}

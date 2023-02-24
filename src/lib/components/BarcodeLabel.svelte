@@ -1,46 +1,55 @@
 <script lang="ts">
 	import Barcode from "$lib/components/Barcode.svelte";
 
-	export let text: string = ''
 	/**
-	 * Label to display above the barcode. Takes in an array of strings.
+	 *	The text value to be rendered as a barcode.
 	 */
-	export let labels: string[] = ['one', 'two', 'three']
+	export let value: string = ''
+	/**
+	 * Text to be displayed above the barcode. Takes in an array of strings.
+	 */
+	export let text: string[] = ['one', 'two', 'three']
 </script>
 
 <barcode-label>
-	<labels>
-		{#each labels as label}
-		<span>{label}</span>
+	<barcode-text>
+		{#each text as t}
+		<span>{t}</span>
 		{/each}
-	</labels>
-	<Barcode {text}/>
+	</barcode-text>
+	<Barcode {value} --width='var(--barcode-width)' --height='var(--barcode-height)'/>
 </barcode-label>
 
 <style>
 	barcode-label {
+		--barcode-width: 100%;
+		--barcode-height: 100px;
+
 		display: inline-block;
+		
+		font-family: var(--font-mono);
+		font-size: 1rem;
 	}
 
-	labels {
+	barcode-text {
 		display: flex;
-		gap: 1rem;
+		gap: 2ch;
 	}
 
 	@media print {
 		barcode-label {
+			--barcode-width: 80%;
+			--barcode-height: 40%;
+
 			height: 100vh;
 			width: 100vw;
+
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			gap: 1rem;
-		}
 
-		labels {
-			gap: 2rem;
-			font-size: 3vw;
+			font-size: 5vw; /* use viewport units for responsive font size */
 		}
 	}
 </style>

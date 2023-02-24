@@ -9,6 +9,7 @@
 <h4>even more things</h4>
 <p>Enable "Fit to Page Width" in the browser Print Dialog</p>
 
-<BarcodeLabel text="ohmygosh"/>
-<BarcodeLabel text="whatisthis" labels={['four', 'five', 'six']}/>
-<BarcodeLabel text="printacode" labels={['seven', 'eight', 'nine', 'ten']}/>
+<BarcodeLabel value="ohmygosh"/>
+<BarcodeLabel value="ohmygosh" text={['KITVIN', '123456', 'V30']}/>
+<BarcodeLabel value="ohmygosh" text={['four', 'five', 'six']}/>
+<BarcodeLabel value="ohmygosh" text={['seven', 'eight', 'nine', 'ten']}/>
